@@ -1,0 +1,455 @@
+
+未设置属性
+autolink_8q:/ $ ps -e | grep demo
+u0_a62        3351  1640 1621256  95168 0                   0 S com.demo.wrapshell
+autolink_8q:/ $ dumpsys meminfo --unreachable 3351
+Applications Memory Usage (in Kilobytes):
+Uptime: 96013 Realtime: 96013
+
+** MEMINFO in pid 3351 [com.demo.wrapshell] **
+                   Pss  Private  Private  SwapPss     Heap     Heap     Heap
+                 Total    Dirty    Clean    Dirty     Size    Alloc     Free
+                ------   ------   ------   ------   ------   ------   ------
+  Native Heap     9961     9908        0        0    16384    13289     3094
+  Dalvik Heap     1347     1236        0        0     2886     1350     1536
+ Dalvik Other      454      452        0        0
+        Stack       84       84        0        0
+       Ashmem        2        0        0        0
+    Other dev       12        0       12        0
+     .so mmap     2706      456      192        0
+    .apk mmap      369        0      304        0
+    .ttf mmap       19        0        0        0
+    .dex mmap     2795        4     1792        0
+    .oat mmap       53        0        0        0
+    .art mmap     6398     6028        0        0
+   Other mmap       34        4        0        0
+      Unknown      631      584        0        0
+        TOTAL    24865    18756     2300        0    19270    14639     4630
+
+ App Summary
+                       Pss(KB)
+                        ------
+           Java Heap:     7264
+         Native Heap:     9908
+                Code:     2748
+               Stack:       84
+            Graphics:        0
+       Private Other:     1052
+              System:     3809
+
+               TOTAL:    24865       TOTAL SWAP PSS:        0
+
+ Objects
+               Views:       18         ViewRootImpl:        1
+         AppContexts:        5           Activities:        1
+              Assets:        2        AssetManagers:        0
+       Local Binders:        8        Proxy Binders:       23
+       Parcel memory:        2         Parcel count:       10
+    Death Recipients:        0      OpenSSL Sockets:        0
+            WebViews:        0
+
+ SQL
+         MEMORY_USED:        0
+  PAGECACHE_OVERFLOW:        0          MALLOC_SIZE:        0
+
+
+ Unreachable memory
+  1216 bytes in 7 unreachable allocations
+  ABI: 'arm64'
+
+  160 bytes unreachable at e94030da68c0
+   referencing 768 unreachable bytes in 1 allocation
+   first 32 bytes of contents:
+   e94030da68c0: 88 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 ................
+   e94030da68d0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 ................
+
+  96 bytes unreachable at e94030c22bc0
+   first 20 bytes of contents:
+   e94030c22bc0: 4f 53 20 20 6d 2f 6c 69 00 00 00 00 00 00 00 00 OS  m/li........
+   e94030c22bd0: 00 00 00 00 00 00 00 00 ff ff ff ff 6e 64 6f 72 ............ndor
+
+  64 bytes unreachable at e94030c925c0
+   first 20 bytes of contents:
+   e94030c925c0: 28 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 (...............
+   e94030c925d0: 00 40 00 00 00 00 00 00 00 00 00 00 00 00 00 00 .@..............
+
+  64 bytes unreachable at e94030c92600
+   first 20 bytes of contents:
+   e94030c92600: 28 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 (...............
+   e94030c92610: 00 40 00 00 00 00 00 00 00 00 00 00 00 00 00 00 .@..............
+
+  32 bytes unreachable at e94030d33920
+   contents:
+   e94030d33920: 04 00 00 00 00 00 00 00 65 2e 64 69 73 61 62 6c ........e.disabl
+   e94030d33930: 02 00 00 00 5f 70 72 65 6c 6f 61 64 00 00 00 00 ...._preload....
+
+  32 bytes unreachable at e94030d33e20
+   contents:
+   e94030d33e20: 04 00 00 00 00 00 00 00 ff ff ff ff ff ff ff ff ................
+   e94030d33e30: 03 00 00 00 00 00 00 00 e0 38 d3 30 40 e9 00 00 .........8.0@...
+
+autolink_8q:/ $
+autolink_8q:/ $
+autolink_8q:/ $
+autolink_8q:/ $ dumpsys meminfo --unreachable 3351
+Applications Memory Usage (in Kilobytes):
+Uptime: 123884 Realtime: 123884
+
+** MEMINFO in pid 3351 [com.demo.wrapshell] **
+                   Pss  Private  Private  SwapPss     Heap     Heap     Heap
+                 Total    Dirty    Clean    Dirty     Size    Alloc     Free
+                ------   ------   ------   ------   ------   ------   ------
+  Native Heap    12528    12480        0        0    18432    15858     2573
+  Dalvik Heap     1043      992        0        0     2897     1361     1536
+ Dalvik Other      392      392        0        0
+        Stack       96       96        0        0
+       Ashmem        2        0        0        0
+    Other dev       12        0       12        0
+     .so mmap     2833      464      216        0
+    .apk mmap      369        0      304        0
+    .ttf mmap       19        0        0        0
+    .dex mmap     2724        4     1624        0
+    .oat mmap       62        0        0        0
+    .art mmap     6592     6100       64        0
+   Other mmap       42        4        0        0
+      Unknown      666      620        0        0
+        TOTAL    27380    21152     2220        0    21329    17219     4109
+
+ App Summary
+                       Pss(KB)
+                        ------
+           Java Heap:     7156
+         Native Heap:    12480
+                Code:     2612
+               Stack:       96
+            Graphics:        0
+       Private Other:     1028
+              System:     4008
+
+               TOTAL:    27380       TOTAL SWAP PSS:        0
+
+ Objects
+               Views:       20         ViewRootImpl:        2
+         AppContexts:        5           Activities:        1
+              Assets:        2        AssetManagers:        0
+       Local Binders:       10        Proxy Binders:       24
+       Parcel memory:        2         Parcel count:       10
+    Death Recipients:        0      OpenSSL Sockets:        0
+            WebViews:        0
+
+ SQL
+         MEMORY_USED:        0
+  PAGECACHE_OVERFLOW:        0          MALLOC_SIZE:        0
+
+
+ Unreachable memory
+  1216 bytes in 7 unreachable allocations
+  ABI: 'arm64'
+
+  160 bytes unreachable at e94030da68c0
+   referencing 768 unreachable bytes in 1 allocation
+   first 32 bytes of contents:
+   e94030da68c0: 88 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 ................
+   e94030da68d0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 ................
+
+  96 bytes unreachable at e94030c22bc0
+   first 20 bytes of contents:
+   e94030c22bc0: 4f 53 20 20 6d 2f 6c 69 00 00 00 00 00 00 00 00 OS  m/li........
+   e94030c22bd0: 00 00 00 00 00 00 00 00 ff ff ff ff 6e 64 6f 72 ............ndor
+
+  64 bytes unreachable at e94030c925c0
+   first 20 bytes of contents:
+   e94030c925c0: 28 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 (...............
+   e94030c925d0: 00 40 00 00 00 00 00 00 00 00 00 00 00 00 00 00 .@..............
+
+  64 bytes unreachable at e94030c92600
+   first 20 bytes of contents:
+   e94030c92600: 28 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 (...............
+   e94030c92610: 00 40 00 00 00 00 00 00 00 00 00 00 00 00 00 00 .@..............
+
+  32 bytes unreachable at e94030d33920
+   contents:
+   e94030d33920: 04 00 00 00 00 00 00 00 65 2e 64 69 73 61 62 6c ........e.disabl
+   e94030d33930: 02 00 00 00 5f 70 72 65 6c 6f 61 64 00 00 00 00 ...._preload....
+
+  32 bytes unreachable at e94030d33e20
+   contents:
+   e94030d33e20: 04 00 00 00 00 00 00 00 ff ff ff ff ff ff ff ff ................
+   e94030d33e30: 03 00 00 00 00 00 00 00 e0 38 d3 30 40 e9 00 00 .........8.0@...
+
+autolink_8q:/ $
+autolink_8q:/ $
+autolink_8q:/ $
+autolink_8q:/ $
+autolink_8q:/ $
+autolink_8q:/ $ dumpsys meminfo --unreachable 3351
+Applications Memory Usage (in Kilobytes):
+Uptime: 168723 Realtime: 168723
+
+** MEMINFO in pid 3351 [com.demo.wrapshell] **
+                   Pss  Private  Private  SwapPss     Heap     Heap     Heap
+                 Total    Dirty    Clean    Dirty     Size    Alloc     Free
+                ------   ------   ------   ------   ------   ------   ------
+  Native Heap    15047    15000        0        0    20480    18291     2188
+  Dalvik Heap     1039      988        0        0     2898     1362     1536
+ Dalvik Other      420      420        0        0
+        Stack       96       96        0        0
+       Ashmem        2        0        0        0
+    Other dev       12        0       12        0
+     .so mmap     2833      464      216        0
+    .apk mmap      369        0      304        0
+    .ttf mmap       19        0        0        0
+    .dex mmap     2746        4     1624        0
+    .oat mmap       62        0        0        0
+    .art mmap     6582     6100       64        0
+   Other mmap       42        4        0        0
+      Unknown      670      624        0        0
+        TOTAL    29939    23700     2220        0    23378    19653     3724
+
+ App Summary
+                       Pss(KB)
+                        ------
+           Java Heap:     7152
+         Native Heap:    15000
+                Code:     2612
+               Stack:       96
+            Graphics:        0
+       Private Other:     1060
+              System:     4019
+
+               TOTAL:    29939       TOTAL SWAP PSS:        0
+
+ Objects
+               Views:       20         ViewRootImpl:        2
+         AppContexts:        5           Activities:        1
+              Assets:        2        AssetManagers:        0
+       Local Binders:       12        Proxy Binders:       25
+       Parcel memory:        2         Parcel count:       10
+    Death Recipients:        0      OpenSSL Sockets:        0
+            WebViews:        0
+
+ SQL
+         MEMORY_USED:        0
+  PAGECACHE_OVERFLOW:        0          MALLOC_SIZE:        0
+
+
+ Unreachable memory
+  2106560 bytes in 9 unreachable allocations
+  ABI: 'arm64'
+
+  1052672 bytes unreachable at e940168f1000
+   first 20 bytes of contents:
+   e940168f1000: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 ................
+   e940168f1010: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 ................
+
+  1052672 bytes unreachable at e94016a0d000
+   first 20 bytes of contents:
+   e94016a0d000: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 ................
+   e94016a0d010: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 ................
+
+  160 bytes unreachable at e94030da68c0
+   referencing 768 unreachable bytes in 1 allocation
+   first 32 bytes of contents:
+   e94030da68c0: 88 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 ................
+   e94030da68d0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 ................
+
+  96 bytes unreachable at e94030c22bc0
+   first 20 bytes of contents:
+   e94030c22bc0: 4f 53 20 20 6d 2f 6c 69 00 00 00 00 00 00 00 00 OS  m/li........
+   e94030c22bd0: 00 00 00 00 00 00 00 00 ff ff ff ff 6e 64 6f 72 ............ndor
+
+  64 bytes unreachable at e94030c925c0
+   first 20 bytes of contents:
+   e94030c925c0: 28 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 (...............
+   e94030c925d0: 00 40 00 00 00 00 00 00 00 00 00 00 00 00 00 00 .@..............
+
+  64 bytes unreachable at e94030c92600
+   first 20 bytes of contents:
+   e94030c92600: 28 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 (...............
+   e94030c92610: 00 40 00 00 00 00 00 00 00 00 00 00 00 00 00 00 .@..............
+
+  32 bytes unreachable at e94030d33920
+   contents:
+   e94030d33920: 04 00 00 00 00 00 00 00 65 2e 64 69 73 61 62 6c ........e.disabl
+   e94030d33930: 02 00 00 00 5f 70 72 65 6c 6f 61 64 00 00 00 00 ...._preload....
+
+  32 bytes unreachable at e94030d33e20
+   contents:
+   e94030d33e20: 04 00 00 00 00 00 00 00 ff ff ff ff ff ff ff ff ................
+   e94030d33e30: 03 00 00 00 00 00 00 00 e0 38 d3 30 40 e9 00 00 .........8.0@...
+
+
+
+
+
+设置以下属性
+adb shell setprop wrap.com.demo.wrapshell '"LIBC_DEBUG_MALLOC_OPTIONS=backtrace logwrapper"'
+adb shell am force-stop com.demo.wrapshell
+
+
+autolink_8q:/data/local/tmp # ps -e | grep demo
+u0_a62        5390  5387 1624728 154448 SyS_epoll_wait      0 S com.demo.wrapshell
+umpsys meminfo --unreachable 5390                                             <
+Applications Memory Usage (in Kilobytes):
+Uptime: 2619888 Realtime: 2619888
+
+** MEMINFO in pid 5390 [com.demo.wrapshell] **
+                   Pss  Private  Private  SwapPss     Heap     Heap     Heap
+                 Total    Dirty    Clean    Dirty     Size    Alloc     Free
+                ------   ------   ------   ------   ------   ------   ------
+  Native Heap    16380    16380        0        0    20480    17209     3270
+  Dalvik Heap    11596    11596        0        0     5629     2815     2814
+ Dalvik Other      636      636        0        0
+        Stack       48       48        0        0
+       Ashmem        2        0        0        0
+    Other dev       12        0       12        0
+     .so mmap    14039     4412     3260        0
+    .jar mmap       54        0        0        0
+    .apk mmap     2143     1760       56        0
+    .ttf mmap      797        0      144        0
+    .dex mmap     1320      152        0        0
+    .oat mmap     1563       68        0        0
+    .art mmap     2768     2168       12        0
+   Other mmap     1758       52      324        0
+      Unknown      956      956        0        0
+        TOTAL    54072    38228     3808        0    26109    20024     6084
+
+ App Summary
+                       Pss(KB)
+                        ------
+           Java Heap:    13776
+         Native Heap:    16380
+                Code:     9852
+               Stack:       48
+            Graphics:        0
+       Private Other:     1980
+              System:    12036
+
+               TOTAL:    54072       TOTAL SWAP PSS:        0
+
+ Objects
+               Views:       18         ViewRootImpl:        1
+         AppContexts:        5           Activities:        1
+              Assets:        2        AssetManagers:        0
+       Local Binders:        8        Proxy Binders:       23
+       Parcel memory:        2         Parcel count:       10
+    Death Recipients:        0      OpenSSL Sockets:        0
+            WebViews:        0
+
+ SQL
+         MEMORY_USED:        0
+  PAGECACHE_OVERFLOW:        0          MALLOC_SIZE:        0
+
+
+ Unreachable memory
+  32 bytes in 1 unreachable allocation
+  ABI: 'arm64'
+
+  32 bytes unreachable at fc61e54d0ba0
+   contents:
+   fc61e54d0ba0: 04 00 00 00 00 00 00 00 65 2e 64 69 73 61 62 6c ........e.disabl
+   fc61e54d0bb0: 04 00 00 00 5f 70 72 65 6c 6f 61 64 00 00 00 00 ...._preload....
+          #00  pc 00000000000d5344  /vendor/lib64/libGAL.so (gcoOS_AtomConstruct+124)
+          #01  pc 00000000000d29e4  /vendor/lib64/libGAL.so (gcoOS_GetDriverTLS+1028)
+          #02  pc 0000000000007a94  /vendor/lib64/egl/libEGL_VIVANTE.so
+          #03  pc 0000000000011cd0  /vendor/lib64/egl/libEGL_VIVANTE.so (eglGetProcAddress+184)
+          #04  pc 000000000001c274  /system/lib64/libEGL.so
+          #05  pc 000000000001ba24  /system/lib64/libEGL.so
+          #06  pc 00000000000149a4  /system/lib64/libEGL.so
+          #07  pc 0000000000014c58  /system/lib64/libEGL.so (eglGetDisplay+152)
+          #08  pc 00000000000c4c70  /system/lib64/libandroid_runtime.so
+          #09  pc 0000000000012588  /system/framework/arm64/boot-framework.oat (offset 0x3cf000)
+
+umpsys meminfo --unreachable 5390^C                                           <
+umpsys meminfo --unreachable 5390                                             <
+Applications Memory Usage (in Kilobytes):
+Uptime: 2694743 Realtime: 2694743
+
+** MEMINFO in pid 5390 [com.demo.wrapshell] **
+                   Pss  Private  Private  SwapPss     Heap     Heap     Heap
+                 Total    Dirty    Clean    Dirty     Size    Alloc     Free
+                ------   ------   ------   ------   ------   ------   ------
+  Native Heap    13948      640        0        0    38912    28161    10750
+  Dalvik Heap     1554        4        0        0     5505     2769     2736
+ Dalvik Other      272        0        0        0
+        Stack       30       12        0        0
+       Ashmem        2        0        0        0
+    Other dev       12        0       12        0
+     .so mmap    11634        4     2872        0
+    .jar mmap       54        0        0        0
+    .apk mmap     1262        0       56        0
+    .ttf mmap      797        0      144        0
+    .dex mmap     1295        0        0        0
+    .oat mmap     1605        0        0        0
+    .art mmap     1776        0       56        0
+   Other mmap     1734        4      324        0
+      Unknown      528       48        0        0
+        TOTAL    36503      712     3464        0    44417    30930    13486
+
+ App Summary
+                       Pss(KB)
+                        ------
+           Java Heap:       60
+         Native Heap:      640
+                Code:     3076
+               Stack:       12
+            Graphics:        0
+       Private Other:      388
+              System:    32327
+
+               TOTAL:    36503       TOTAL SWAP PSS:        0
+
+ Objects
+               Views:       20         ViewRootImpl:        2
+         AppContexts:        5           Activities:        1
+              Assets:        2        AssetManagers:        0
+       Local Binders:       17        Proxy Binders:       24
+       Parcel memory:        3         Parcel count:       12
+    Death Recipients:        0      OpenSSL Sockets:        0
+            WebViews:        0
+
+ SQL
+         MEMORY_USED:        0
+  PAGECACHE_OVERFLOW:        0          MALLOC_SIZE:        0
+
+
+ Unreachable memory
+  7340064 bytes in 8 unreachable allocations
+  ABI: 'arm64'
+
+  1048576 bytes unreachable at fc61cb00dfc0
+   and 6291456 similar unreachable bytes in 6 allocations
+   first 32 bytes of contents:
+   fc61cb00dfc0: 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 aaaaaaaaaaaaaaaa
+   fc61cb00dfd0: 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 aaaaaaaaaaaaaaaa
+          #00  pc 000000000000ee0c  /data/app/com.demo.wrapshell-5e3YjhSGhdXWiy39_7823g==/lib/arm64/libnative-lib.so (Java_com_demo_wrapshell_MainActivity_testNativeLeak+80)
+          #01  pc 0000000000565be0  /system/lib64/libart.so
+          #02  pc 000000000055cb88  /system/lib64/libart.so
+          #03  pc 00000000000cf740  /system/lib64/libart.so (art::ArtMethod::Invoke(art::Thread*, unsigned int*, unsigned int, art::JValue*, char const*)+200)
+          #04  pc 0000000000282460  /system/lib64/libart.so (art::interpreter::ArtInterpreterToCompiledCodeBridge(art::Thread*, art::ArtMethod*, art::ShadowFrame*, unsigned short, art::JValue*)+344)
+          #05  pc 000000000027c41c  /system/lib64/libart.so (bool art::interpreter::DoCall<false, false>(art::ArtMethod*, art::Thread*, art::ShadowFrame&, art::Instruction const*, unsigned short, art::JValue*)+)
+          #06  pc 000000000052c4c8  /system/lib64/libart.so (MterpInvokeVirtual+584)
+          #07  pc 000000000054f194  /system/lib64/libart.so (ExecuteMterpImpl+14228)
+          #08  pc 0000000000255f18  /system/lib64/libart.so
+          #09  pc 000000000051cc08  /system/lib64/libart.so (artQuickToInterpreterBridge+1032)
+          #10  pc 0000000000565cfc  /system/lib64/libart.so
+          #11  pc 000000000055cb88  /system/lib64/libart.so
+          #12  pc 00000000000cf740  /system/lib64/libart.so (art::ArtMethod::Invoke(art::Thread*, unsigned int*, unsigned int, art::JValue*, char const*)+200)
+          #13  pc 0000000000463468  /system/lib64/libart.so
+          #14  pc 0000000000464ec0  /system/lib64/libart.so (art::InvokeMethod(art::ScopedObjectAccessAlreadyRunnable const&, _jobject*, _jobject*, _jobject*, unsigned long)+1440)
+          #15  pc 00000000003f4460  /system/lib64/libart.so
+
+  32 bytes unreachable at fc61e54d0ba0
+   contents:
+   fc61e54d0ba0: 04 00 00 00 00 00 00 00 65 2e 64 69 73 61 62 6c ........e.disabl
+   fc61e54d0bb0: 04 00 00 00 5f 70 72 65 6c 6f 61 64 00 00 00 00 ...._preload....
+          #00  pc 00000000000d5344  /vendor/lib64/libGAL.so (gcoOS_AtomConstruct+124)
+          #01  pc 00000000000d29e4  /vendor/lib64/libGAL.so (gcoOS_GetDriverTLS+1028)
+          #02  pc 0000000000007a94  /vendor/lib64/egl/libEGL_VIVANTE.so
+          #03  pc 0000000000011cd0  /vendor/lib64/egl/libEGL_VIVANTE.so (eglGetProcAddress+184)
+          #04  pc 000000000001c274  /system/lib64/libEGL.so
+          #05  pc 000000000001ba24  /system/lib64/libEGL.so
+          #06  pc 00000000000149a4  /system/lib64/libEGL.so
+          #07  pc 0000000000014c58  /system/lib64/libEGL.so (eglGetDisplay+152)
+          #08  pc 00000000000c4c70  /system/lib64/libandroid_runtime.so
+          #09  pc 0000000000012588  /system/framework/arm64/boot-framework.oat (offset 0x3cf000)

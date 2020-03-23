@@ -18,6 +18,8 @@ Java_com_demo_wrapshell_MainActivity_stringFromJNI(JNIEnv *env,jobject /* this *
 extern "C"
 JNIEXPORT void JNICALL
 Java_com_demo_wrapshell_MainActivity_testNativeLeak(JNIEnv *env, jobject instance) {
+
+    __android_log_print(ANDROID_LOG_ERROR, "cww", " Java_com_demo_wrapshell_MainActivity_testNativeLeak ");
     char *p;
 
     p = (char *)malloc(1024 * 1024);

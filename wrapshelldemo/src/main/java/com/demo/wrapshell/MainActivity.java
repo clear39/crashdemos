@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -21,6 +22,7 @@ public class MainActivity extends AppCompatActivity {
 
     public void testMalloc(View v){
         testNativeLeak();
+        Toast.makeText(this,R.string.app_name,Toast.LENGTH_SHORT).show();
     }
 
     /**

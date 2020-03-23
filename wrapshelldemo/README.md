@@ -21,6 +21,9 @@ u0_a291       3457  3429   27308   2212 0                   0 S logwrapper
 1|sirius:/ $ ps -e | grep 647
 root           647     1 5478268  45696 0                   0 S zygote64
 
+结论(启动顺序)：【zygote64(647)】 --> 【sh(3429)】--> 【logwrapper(3457)】-->【sh(3462)】-->【logwrapper(3465)】-->【com.demo.wrapshell.debug(3467)】
+
+
 
 第二种调试脚本：
 LIBC_DEBUG_MALLOC_OPTIONS=backtrace "$@"
@@ -38,6 +41,8 @@ u0_a292       4275   647   27340   2192 0                   0 S sh
 u0_a292       4320  4275   27308   2328 0                   0 S logwrapper
 1|sirius:/ $ ps -e | grep 647
 root           647     1 5478268  45696 0                   0 S zygote64
+
+结论(启动顺序)：【zygote64(647)】 --> 【sh(4275)】--> 【logwrapper(4320)】-->【sh(4321)】-->【com.demo.wrapshell.debug(4322)】
 
 
 xqli@linux:/work/workcodes/android-demos/CrashDemos/wrapshelldemo/build$ find -name libnative-lib.so
