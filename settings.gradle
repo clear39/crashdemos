@@ -1,2 +1,2 @@
-include ':app', ':stracetooldemo', ':bitmapdemo', ':wrapshelldemo', ':jnicrashdemo'
+include ':app', ':stracetooldemo', ':bitmapdemo', ':wrapshelldemo', ':jnicrashdemo', ':jnisegmentdemo'
 rootProject.name='CrashDemos'
